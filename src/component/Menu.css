@@ -12,7 +12,7 @@
     will-change: transform, -webkit-transform;
 }
 .avatar-inner-wrap {
-    padding: 40px 20px;
+    padding: 40px 20px 22px;
     background: rgba(63, 81, 181, 0.5);
 }
 .avatar-wrap {
@@ -39,7 +39,6 @@
 }
 .avatar-wrap hgroup a {
     display: inline-block;
-    margin-top: 4px;
     color: #c5cae9;
     font-size: 13px;
 }

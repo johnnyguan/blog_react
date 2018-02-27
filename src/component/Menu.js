@@ -26,8 +26,6 @@ class BlogMenu extends Component {
                     <Menu.Item><span><Icon type="bars" /></span>Categories</Menu.Item>
                     <Menu.Item><span><Icon type="github" /></span>Github</Menu.Item>
                 </Menu>
-
-
             </aside>
         )
     }
