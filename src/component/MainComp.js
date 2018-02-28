@@ -6,10 +6,13 @@ import Main from './Main';
 import Footer from './Footer';
 
 class MainComp extends Component{
+    constructor(props){
+        super(props);
+    }
     render(){
         return (
-            <div className="main-comp">
-                <Header />
+            <div className={'main-comp ' + (this.props.expand ==='true'?'expanded':'')}>
+                <Header onclick={this.props.onclick} />
                 <Main />
                 <Footer />
             </div>

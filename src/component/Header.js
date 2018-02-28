@@ -2,10 +2,13 @@ import React,{Component} from 'react';
 import './Header.css';
 import {Icon} from 'antd';
 class Header extends Component{
+    constructor(props){
+        super(props);
+    }
     render(){
         return (
             <div className="header">
-                <div className="left-icon">
+                <div className="left-icon" onClick={this.props.onclick}>
                     <Icon type="bars" style={{ fontSize: 16}} />
                 </div>
                 <div className="header-title">JOHN'S BLOG</div>

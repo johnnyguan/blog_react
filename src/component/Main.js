@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './Main.css';
-
+import { Pagination } from 'antd';
 import Card from './Card';
 
 class Main extends Component{
@@ -14,6 +14,9 @@ class Main extends Component{
                     <Card />
                     <Card />
                     <Card />
+                    <div className="pagin">
+                        <Pagination defaultCurrent={1} total={50} />
+                    </div>
                 </div>
             </div>
             

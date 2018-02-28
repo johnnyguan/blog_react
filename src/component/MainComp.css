@@ -1,3 +1,8 @@
 .main-comp {
     padding-left: 240px;
+    transition: 0.4s cubic-bezier(0.18, 0.81, 0.3, 0.89);
+    will-change: padding-left;
+}
+.main-comp.expanded {
+    padding-left: 0;
 }

@@ -5,9 +5,14 @@ import {Menu, Icon} from 'antd';
 
 
 class BlogMenu extends Component {
+    constructor(props){
+        super(props);
+        this.onClick = props.onclick;
+    }
     render() {
+        const className = 'menu-wrap ' + (this.props.close==='close'?'menu-close':'');
         return (
-            <aside className="menu-wrap">
+            <aside className={className}>
                 <div className="avatar-wrap">
                     <div className="avatar-inner-wrap">
                         <div className="avatar">
@@ -19,13 +24,19 @@ class BlogMenu extends Component {
                         </hgroup>
                     </div>
                 </div>
-                <Menu>
-                    <Menu.Item><span><Icon type="home" /></span>主页</Menu.Item>
-                    <Menu.Item><span><Icon type="profile" /></span>Archives</Menu.Item>
-                    <Menu.Item><span><Icon type="tags" /></span>Tags</Menu.Item>
-                    <Menu.Item><span><Icon type="bars" /></span>Categories</Menu.Item>
-                    <Menu.Item><span><Icon type="github" /></span>Github</Menu.Item>
-                </Menu>
+                <div className="menu-items">
+                    <Menu>
+                        <Menu.Item><span><Icon type="home" /></span>主页</Menu.Item>
+                        <Menu.Item><span><Icon type="profile" /></span>Archives</Menu.Item>
+                        <Menu.Item><span><Icon type="tags" /></span>Tags</Menu.Item>
+                        <Menu.Item><span><Icon type="bars" /></span>Categories</Menu.Item>
+                        <Menu.Item><span><Icon type="github" /></span>Github</Menu.Item>
+                    </Menu>
+                </div>
+                
+                <div className="close-btn" onClick={this.onClick}>
+                    <Icon type="close" style={{ fontSize: 16, color: '#fff' }} />
+                </div>
             </aside>
         )
     }

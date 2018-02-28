@@ -11,6 +11,9 @@
     transition: 0.4s cubic-bezier(0.18, 0.81, 0.3, 0.89);
     will-change: transform, -webkit-transform;
 }
+.menu-wrap.menu-close {
+    transform: translateX(-240px);
+}
 .avatar-inner-wrap {
     padding: 40px 20px 22px;
     background: rgba(63, 81, 181, 0.5);
@@ -41,4 +44,16 @@
     display: inline-block;
     color: #c5cae9;
     font-size: 13px;
+}
+.close-btn {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: -56px;
+    padding: 20px;
+    transition: 0.4s cubic-bezier(0.18, 0.81, 0.3, 0.89);
+    will-change: display;
+}
+.menu-wrap.menu-close .close-btn {
+    display: none;
 }
