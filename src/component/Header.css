@@ -7,6 +7,9 @@
     background: #3f51b5;
     color: #fff;
 }
+.header.hide {
+    visibility: hidden;
+}
 .left-icon {
     cursor: pointer;
     width: 56px;

@@ -11,9 +11,9 @@ class Main extends Component{
                     <div className="main-title">JOHN'S BLOG</div>
                 </div>
                 <div className="content-area">
-                    <Card />
-                    <Card />
-                    <Card />
+                    {this.props.blogs.map((v,i)=>{
+                        return <Card blog={v} key={i}/>
+                    })}
                     <div className="pagin">
                         <Pagination defaultCurrent={1} total={50} />
                     </div>

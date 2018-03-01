@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './MainComp.css';
 
 import HeaderWrap from '../container/HeaderWrap';
-import Main from './Main';
+import MainWrap from '../container/MainWrap';
 import Footer from './Footer';
 
 class MainComp extends Component {
@@ -10,7 +10,7 @@ class MainComp extends Component {
         return (
             <div className={this.props.className} >
                 <HeaderWrap />
-                <Main/>
+                <MainWrap/>
                 <Footer />
             </div>
         )

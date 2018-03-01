@@ -4,7 +4,7 @@ import {Icon} from 'antd';
 class Header extends Component{
     render(){
         return (
-            <div className="header">
+            <div className={this.props.className}>
                 <div className="left-icon" onClick={this.props.onClick}>
                     <Icon type="bars" style={{ fontSize: 16}} />
                 </div>
