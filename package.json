@@ -1,12 +1,18 @@
-{ 
+{
   "name": "rea_t",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "ajv": "^6.0.0",
     "antd": "^3.2.2",
+    "babel-plugin-import": "^1.6.5",
     "react": "^16.2.0",
+    "react-app-rewire-less": "^2.1.0",
+    "react-app-rewired": "^1.4.1",
     "react-dom": "^16.2.0",
-    "react-scripts": "1.1.1"
+    "react-redux": "^5.0.7",
+    "react-scripts": "1.1.1",
+    "redux": "^3.7.2"
   },
   "scripts": {
     "start": "react-app-rewired start",

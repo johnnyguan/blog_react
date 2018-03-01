@@ -1,19 +1,16 @@
-import React,{Component} from 'react';
+import React, { Component } from 'react';
 import './MainComp.css';
 
-import Header from './Header';
+import HeaderWrap from '../container/HeaderWrap';
 import Main from './Main';
 import Footer from './Footer';
 
-class MainComp extends Component{
-    constructor(props){
-        super(props);
-    }
-    render(){
+class MainComp extends Component {
+    render() {
         return (
-            <div className={'main-comp ' + (this.props.expand ==='true'?'expanded':'')}>
-                <Header onclick={this.props.onclick} />
-                <Main />
+            <div className={this.props.className} >
+                <HeaderWrap />
+                <Main/>
                 <Footer />
             </div>
         )

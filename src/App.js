@@ -1,33 +1,30 @@
 import React, { Component } from 'react';
-import BlogMenu from './component/Menu';
-import MainComp from './component/MainComp';
+import BlogMenuWrap from './container/BlogMenuWrap';
+import MainCompWrap from './container/MainCompWrap';
 class App extends Component {
   constructor(props) {
     super(props);
-    this.onClickClose = this.onClickClose.bind(this);
-    this.onClickReset = this.onClickReset.bind(this);
-    this.state = {
-      menuClose: false
-    }
+    this.handleScroll = this.handleScroll.bind(this);
   }
   render() {
     return (
       <div>
-        <BlogMenu onclick={this.onClickClose} close={this.state.menuClose===false?'open':'close'} />
-        <MainComp expand={this.state.menuClose===true?'true':'false'} onclick={this.onClickReset} />
+        <BlogMenuWrap />
+        <MainCompWrap />
       </div>
     )
   }
-  onClickClose(){
-    
-    this.setState({
-      menuClose: true
-    })
+  componentDidMount(){
+    /* window.addEventListener('scroll',()=>{
+      this.handleScroll();
+    }) */
   }
-  onClickReset(){
-    this.setState({
-      menuClose: false
-    })
+  handleScroll(){
+    if (document.documentElement.scrollTop > 0) {
+      this.setState({
+        className: 'show'
+      })
+    } 
   }
 }
 

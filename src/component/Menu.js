@@ -5,14 +5,9 @@ import {Menu, Icon} from 'antd';
 
 
 class BlogMenu extends Component {
-    constructor(props){
-        super(props);
-        this.onClick = props.onclick;
-    }
     render() {
-        const className = 'menu-wrap ' + (this.props.close==='close'?'menu-close':'');
         return (
-            <aside className={className}>
+            <aside className={this.props.className}>
                 <div className="avatar-wrap">
                     <div className="avatar-inner-wrap">
                         <div className="avatar">
@@ -34,7 +29,7 @@ class BlogMenu extends Component {
                     </Menu>
                 </div>
                 
-                <div className="close-btn" onClick={this.onClick}>
+                <div className="close-btn" onClick={this.props.onClick}>
                     <Icon type="close" style={{ fontSize: 16, color: '#fff' }} />
                 </div>
             </aside>
